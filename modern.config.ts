@@ -3,13 +3,25 @@ import { tailwindcssPlugin } from '@modern-js/plugin-tailwindcss';
 
 // https://modernjs.dev/en/configure/app/usage
 export default defineConfig({
-  runtime: {
-    router: true,
-  },
-  plugins: [
-    appTools({
-      bundler: 'rspack', // Set to 'webpack' to enable webpack
-    }),
-    tailwindcssPlugin(),
-  ],
+    runtime: {
+        router: true,
+    },
+    plugins: [
+        appTools({
+            bundler: 'rspack',
+        }),
+        tailwindcssPlugin(),
+    ],
+    // 修改html为默认打包
+    output: {
+        distPath: {
+            html: '',
+        },
+        filename: {
+            html: 'index.html',
+        },
+    },
+    html: {
+        disableHtmlFolder: true,
+    },
 });

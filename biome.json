@@ -8,7 +8,9 @@
   },
   "formatter": {
     "enabled": true,
-    "indentStyle": "space"
+    "indentStyle": "space",
+    "indentWidth": 4,
+    "bracketSpacing": true
   },
   "json": {
     "formatter": {
@@ -17,10 +19,13 @@
   },
   "javascript": {
     "formatter": {
+      "enabled": true,
       "quoteStyle": "single",
       "arrowParentheses": "asNeeded",
       "jsxQuoteStyle": "double",
-      "lineWidth": 80
+      "lineWidth": 80,
+      "indentStyle": "space",
+      "indentWidth": 4
     }
   },
   "linter": {
@@ -37,6 +42,10 @@
   },
   "files": {
     "ignoreUnknown": true,
-    "ignore": [".vscode/**/*", "node_modules/**/*", "dist/**/*"]
+    "ignore": [
+      ".vscode/**/*",
+      "node_modules/**/*",
+      "dist/**/*"
+    ]
   }
 }
