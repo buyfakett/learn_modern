@@ -12,14 +12,13 @@ export default defineConfig({
         }),
         tailwindcssPlugin(),
     ],
-    // 修改html为默认打包
     output: {
         distPath: {
             html: '',
         },
-        filename: {
-            html: 'index.html',
-        },
+    },
+    source: {
+        mainEntryName: 'index',
     },
     html: {
         disableHtmlFolder: true,
